@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Joker Jotter</string>
+    <string name="new_game">Nueva Partida</string>
+    <string name="previous_games">Partidas anteriores</string>
+    <string name="back_button">Back</string>
+    <string name="game_detail">Detalle Partida</string>
+    <string name="score_cards">Puntaje cartas</string>
+    <string name="players">Jugadores</string>
+    <string name="as_card">as</string>
+    <string name="one_eyed">tuertos</string>
+    <string name="joker">joker</string>
+    <string name="edit_item_title">Edit Item</string>
+    <string name="game_edit">Editar Partida</string>
+    <string name="name_game">Nombre Partida</string>
+    <string name="player_id">Jugador %1$s</string>
 </resources>
