@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.jokerjotter.ui.HomeScreen
 import com.example.jokerjotter.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,8 +12,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AppTheme {
-                    HomeScreen()
-                }
+                JokerJotterApp()
+            }
         }
     }
 }
@@ -24,6 +23,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun JokerJotterPreview() {
     AppTheme {
-        HomeScreen()
+        JokerJotterApp()
     }
 }
