@@ -10,7 +10,9 @@
     <string name="one_eyed">tuertos</string>
     <string name="joker">joker</string>
     <string name="edit_item_title">Edit Item</string>
-    <string name="game_edit">Editar Partida</string>
-    <string name="name_game">Nombre Partida</string>
-    <string name="player_id">Jugador %1$s</string>
+    <string name="game_setup">Configurar Partida</string>
+    <string name="name_game">Nombre de partida</string>
+    <string name="player_id">Nombre jugador %1$s</string>
+    <string name="save_button">Guardar</string>
+    <string name="points_input">Puntaje %1$s</string>
 </resources>

@@ -5,6 +5,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.jokerjotter.ui.GameEditDestination
+import com.example.jokerjotter.ui.GameEditScreen
 import com.example.jokerjotter.ui.HomeDestination
 import com.example.jokerjotter.ui.HomeScreen
 
@@ -20,8 +22,14 @@ fun JokerJotterNavHost(
     ) {
         composable(route = HomeDestination.route) {
             HomeScreen(
-                navigateToGameEntry = {},
+                navigateToGameEntry = { navController.navigate(GameEditDestination.route) },
                 navigateToPreviousGames = {}
+            )
+        }
+        composable(route = GameEditDestination.route) {
+            GameEditScreen(
+                navigateBack = { navController.popBackStack() },
+                saveDetails = {  }
             )
         }
     }
