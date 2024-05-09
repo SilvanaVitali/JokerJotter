@@ -16,11 +16,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.jokerjotter.ui.HomeDestination
 import com.example.jokerjotter.ui.navigation.JokerJotterNavHost
 
 @Composable
-fun JokerJotterApp(navController: NavHostController = rememberNavController()) {
-    JokerJotterNavHost(navController = navController)
+fun JokerJotterApp(navController: NavHostController = rememberNavController(), startDestination: String = HomeDestination.route) {
+    JokerJotterNavHost(navController = navController, startDestination = startDestination)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

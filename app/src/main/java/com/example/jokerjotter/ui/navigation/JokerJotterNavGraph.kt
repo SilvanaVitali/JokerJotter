@@ -5,19 +5,22 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.jokerjotter.ui.GameDetailDestination
 import com.example.jokerjotter.ui.GameEditDestination
 import com.example.jokerjotter.ui.GameEditScreen
+import com.example.jokerjotter.ui.GameScreen
 import com.example.jokerjotter.ui.HomeDestination
 import com.example.jokerjotter.ui.HomeScreen
 
 @Composable
 fun JokerJotterNavHost(
     navController: NavHostController,
+    startDestination: String,
     modifier: Modifier = Modifier
 ) {
     NavHost(
         navController = navController,
-        startDestination = HomeDestination.route,
+        startDestination = startDestination,
         modifier = modifier
     ) {
         composable(route = HomeDestination.route) {
@@ -28,9 +31,12 @@ fun JokerJotterNavHost(
         }
         composable(route = GameEditDestination.route) {
             GameEditScreen(
-                navigateBack = { navController.popBackStack() },
-                saveDetails = {  }
+                navigateBack = { navController.navigate(HomeDestination.route) },
+                saveDetails = { navController.navigate(GameDetailDestination.route) }
             )
+        }
+        composable(route = GameDetailDestination.route) {
+            GameScreen()
         }
     }
 }

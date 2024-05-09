@@ -15,4 +15,5 @@
     <string name="player_id">Nombre jugador %1$s</string>
     <string name="save_button">Guardar</string>
     <string name="points_input">Puntaje %1$s</string>
+    <string name="game_screen">Game Screen</string>
 </resources>
