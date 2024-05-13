@@ -16,4 +16,7 @@
     <string name="save_button">Guardar</string>
     <string name="points_input">Puntaje %1$s</string>
     <string name="game_screen">Game Screen</string>
+    <string name="game_rounds">Rondas</string>
+    <string name="best_scores">Mejores Puntajes</string>
+    <string name="player_score">score: %1$s</string>
 </resources>

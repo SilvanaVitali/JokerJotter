@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.example.jokerjotter.JokerJotterApp
 import com.example.jokerjotter.ui.GameDetailScreen
 import com.example.jokerjotter.ui.GameEditDestination
+import com.example.jokerjotter.ui.GameRoundsScreen
 import com.example.jokerjotter.ui.GameScreenDestination
 import com.example.jokerjotter.ui.HomeDestination
 
@@ -28,6 +29,12 @@ fun GameNavGraph(navController: NavHostController) {
         }
         composable(route = GameEditDestination.route) {
             JokerJotterApp(startDestination = GameEditDestination.route)
+        }
+        composable(route = BottomNavigationItem.Rounds.route) {
+            GameRoundsScreen(
+                navController = navController,
+                navigateToRound = {}
+            )
         }
     }
 }

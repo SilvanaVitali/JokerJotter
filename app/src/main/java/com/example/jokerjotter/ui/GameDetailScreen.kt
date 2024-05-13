@@ -253,6 +253,7 @@ fun PlayerCard(player: String, modifier: Modifier = Modifier) {
 fun BottomBar(navController: NavHostController) {
     val barItems = listOf(
         BottomNavigationItem.Home,
+        BottomNavigationItem.Rounds,
         BottomNavigationItem.Setup
     )
     val navBackStackEntry by navController.currentBackStackEntryAsState()
