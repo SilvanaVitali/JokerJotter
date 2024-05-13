@@ -101,7 +101,6 @@ fun GameDetailScreen(
     ) { innerPadding ->
         Box(
             modifier = Modifier
-                .padding(innerPadding)
                 .fillMaxSize()
         ) {
             Image(
@@ -110,7 +109,9 @@ fun GameDetailScreen(
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
-            Column(modifier = Modifier.fillMaxSize()) {
+            Column(modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()) {
                 Text(
                     text = "Juego 1",
                     style = MaterialTheme.typography.headlineMedium,

@@ -19,4 +19,9 @@
     <string name="game_rounds">Rondas</string>
     <string name="best_scores">Mejores Puntajes</string>
     <string name="player_score">score: %1$s</string>
+    <string name="round_detail">Detalle Ronda</string>
+    <string name="hand">Mano</string>
+    <string name="score">Score</string>
+    <string name="three_of">Trío</string>
+    <string name="straight">Escala</string>
 </resources>

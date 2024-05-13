@@ -3,6 +3,7 @@ package com.example.jokerjotter.ui
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -68,9 +69,7 @@ fun GameEditScreen(
         }
     ) { innerPadding ->
         Box(
-            modifier = Modifier
-                .padding(innerPadding)
-                .fillMaxSize()
+            modifier = Modifier.fillMaxSize()
         ) {
             Image(
                 painter = background,
@@ -78,15 +77,16 @@ fun GameEditScreen(
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
-            GameEditBody()
+            GameEditBody(innerPadding)
         }
     }
 }
 
 @Composable
-fun GameEditBody() {
+fun GameEditBody(paddingValues: PaddingValues) {
     Column(
         modifier = Modifier
+            .padding(paddingValues)
             .fillMaxSize(),
     ) {
         var nameGame by rememberSaveable { mutableStateOf("") }

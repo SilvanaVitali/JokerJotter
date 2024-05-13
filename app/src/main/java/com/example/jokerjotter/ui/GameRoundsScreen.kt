@@ -94,9 +94,7 @@ fun GameRoundsScreen(
         bottomBar = { BottomBar(navController = navController) }
     ) { innerPadding ->
         Box(
-            modifier = Modifier
-                .padding(innerPadding)
-                .fillMaxSize()
+            modifier = Modifier.fillMaxSize()
         ) {
             Image(
                 painter = background,
@@ -106,7 +104,7 @@ fun GameRoundsScreen(
             )
             Column(
                 modifier = Modifier
-                    .padding(dimensionResource(R.dimen.padding_medium))
+                    .padding(innerPadding)
                     .fillMaxSize()
             ) {
                 BestScores()
@@ -120,8 +118,9 @@ fun GameRoundsScreen(
 fun BestScores() {
     Box(
         modifier = Modifier
+            .padding(dimensionResource(R.dimen.padding_medium))
             .clip(RoundedCornerShape(25.dp))
-            .background(Color.LightGray.copy(0.11f))
+            .background(Color.Green.copy(0.11f))
             .border(BorderStroke(2.dp, Color.White)),
     ) {
         Column(
