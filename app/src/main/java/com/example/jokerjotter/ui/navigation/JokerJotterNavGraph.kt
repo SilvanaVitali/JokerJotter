@@ -8,9 +8,12 @@ import androidx.navigation.compose.composable
 import com.example.jokerjotter.ui.GameDetailDestination
 import com.example.jokerjotter.ui.GameEditDestination
 import com.example.jokerjotter.ui.GameEditScreen
+import com.example.jokerjotter.ui.GameRoundsDestination
 import com.example.jokerjotter.ui.GameScreen
 import com.example.jokerjotter.ui.HomeDestination
 import com.example.jokerjotter.ui.HomeScreen
+import com.example.jokerjotter.ui.RoundDestination
+import com.example.jokerjotter.ui.RoundScreen
 
 @Composable
 fun JokerJotterNavHost(
@@ -36,7 +39,15 @@ fun JokerJotterNavHost(
             )
         }
         composable(route = GameDetailDestination.route) {
-            GameScreen()
+            GameScreen(startDestination = BottomNavigationItem.Setup.route)
+        }
+        composable(route = RoundDestination.route) {
+            RoundScreen(
+                navigateBack = { navController.navigate(GameRoundsDestination.route) }
+            )
+        }
+        composable(route = GameRoundsDestination.route) {
+            GameScreen(startDestination = BottomNavigationItem.Rounds.route)
         }
     }
 }

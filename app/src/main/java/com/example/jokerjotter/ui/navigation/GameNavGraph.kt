@@ -10,13 +10,17 @@ import com.example.jokerjotter.ui.GameEditDestination
 import com.example.jokerjotter.ui.GameRoundsScreen
 import com.example.jokerjotter.ui.GameScreenDestination
 import com.example.jokerjotter.ui.HomeDestination
+import com.example.jokerjotter.ui.RoundDestination
 
 @Composable
-fun GameNavGraph(navController: NavHostController) {
+fun GameNavGraph(
+    navController: NavHostController,
+    startDestination: String,
+    ) {
     NavHost(
         navController = navController,
         route = GameScreenDestination.route,
-        startDestination = BottomNavigationItem.Setup.route
+        startDestination = startDestination
     ) {
         composable(route = BottomNavigationItem.Home.route) {
             JokerJotterApp(startDestination = HomeDestination.route)
@@ -33,8 +37,11 @@ fun GameNavGraph(navController: NavHostController) {
         composable(route = BottomNavigationItem.Rounds.route) {
             GameRoundsScreen(
                 navController = navController,
-                navigateToRound = {}
+                navigateToRound = { navController.navigate(RoundDestination.route) }
             )
+        }
+        composable(route = RoundDestination.route) {
+            JokerJotterApp(startDestination = RoundDestination.route)
         }
     }
 }
